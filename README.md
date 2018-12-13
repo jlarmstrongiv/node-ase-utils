@@ -1,3 +1,79 @@
+# Fork
+I just needed to merge pull requests from the fragmented libraries.  To install this version, `npm install https://github.com/jlarmstrongiv/node-ase-utils` or `yarn add https://github.com/jlarmstrongiv/node-ase-utils`.
+
+## Merged Pull Requests
+- https://github.com/hughsk/adobe-swatch-exchange/pull/6
+- https://github.com/DominikGuzei/node-ase-utils/pull/3
+
+## Additional Documentation
+
+### Groups
+
+```json
+{
+  "version": "1.0",
+  "groups": [{
+    "name": "",
+    "colors": {
+      "name": "RGB Red",
+      "model": "RGB",
+      "color": [1, 0, 0],
+      "type": "global"
+    }, {
+      "name": "RGB Yellow",
+      "model": "RGB",
+      "color": [1, 1, 0],
+      "type": "global"
+    }
+  }],
+  "colors": []
+}
+```
+
+### Color Modes
+Exporting HSB and WebSafeRGB from Adobe Illustrator both convert to RGB.
+
+Types include `global`, `spot`, and `normal`.  Global allows the color to be synced so that changing the swatch changes all instances.  Spot is also global, but maintains the color models.
+
+Color modes include:
+```json
+{
+  "model": "Gray",
+  "color": [
+    "0.12345678"
+  ]
+}
+
+{
+  "model": "CMYK",
+  "color": [
+    "0.12345678",
+    "0.12345678",
+    "0.12345678",
+    "0.12345678"
+  ]
+}
+
+{
+  "model": "RBG",
+  "color": [
+    "0.12345678",
+    "0.12345678",
+    "0.12345678"
+  ]
+}
+
+{
+  "model": "LAB",
+  "color": [
+    "0.12345678",
+    "-0.12345678",
+    "0.12345678"
+  ]
+}
+```
+Note that all colors also have the keys `name` and `type`.
+
 # ase-utils
 Encode/decode color palettes in Adobe's `.ase` format.
 
