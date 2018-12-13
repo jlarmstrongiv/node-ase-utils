@@ -13,8 +13,8 @@ I just needed to merge pull requests from the fragmented libraries.  To install 
 {
   "version": "1.0",
   "groups": [{
-    "name": "",
-    "colors": {
+    "name": "Sample Group",
+    "colors": [{
       "name": "RGB Red",
       "model": "RGB",
       "color": [1, 0, 0],
@@ -24,7 +24,7 @@ I just needed to merge pull requests from the fragmented libraries.  To install 
       "model": "RGB",
       "color": [1, 1, 0],
       "type": "global"
-    }
+    }]
   }],
   "colors": []
 }
